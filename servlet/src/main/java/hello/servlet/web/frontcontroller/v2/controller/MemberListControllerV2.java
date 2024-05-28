@@ -14,6 +14,7 @@ import java.util.List;
 public class MemberListControllerV2 implements ControllerV2 {
     private MemberRepository memberRepository = MemberRepository.getInstance();
     @Override
+<<<<<<< HEAD
     public MyView process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Member> members = memberRepository.findAll();
         request.setAttribute("members", members);
@@ -21,3 +22,12 @@ public class MemberListControllerV2 implements ControllerV2 {
         return new MyView("/WEB-INF/views/members.jsp");
     }
 }
+=======
+    public MyView process(HttpServletRequest request, HttpServletResponse
+            response) throws ServletException, IOException {
+        List<Member> members = memberRepository.findAll();
+        request.setAttribute("members", members);
+        return new MyView("/WEB-INF/views/members.jsp");
+    }
+}
+>>>>>>> origin/main
